@@ -14,7 +14,7 @@
 //   UnbodyAdmin,
 // } from "unbody/admin";
 // // Import custom data
-// // import { UnbodyPushAPI } from "unbody/push";
+// import { UnbodyPushAPI } from "unbody/push";
 
 // function App() {
 //   const projectSettings = new ProjectSettings();
@@ -70,6 +70,7 @@
 // export default App;
 
 
+// !=================================================================================
 
 import {
   AutoEntities,
@@ -84,16 +85,6 @@ import {
   UnbodyAdmin,
 } from "unbody/admin";
 
-// import dotenv from "dotenv";
-// import express, { Express, Request, Response } from "express";
-
-// dotenv.config();
-
-// const app: Express = express();
-// const port = process.env.PORT || 3000;
-
-// app.use(express.json());
-
 function App (){
 
   const admin = new UnbodyAdmin({
@@ -105,7 +96,6 @@ function App (){
     baseURL: "https://api.unbody.io/admin",
   });
   
-  // app.get("/", (req: Request, res: Response) => {
     const projectSettings = new ProjectSettings();
     projectSettings
       // Vectorizers
@@ -137,14 +127,6 @@ function App (){
     });
   
     project.save();
-  
-  //   console.log("Project ", project);
-  //   res.send("Hello, World!");
-  // });
-  
-  // app.listen(port, () => {
-  //   console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
-  // });
     
 }
 
